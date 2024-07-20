@@ -21,7 +21,22 @@ RUN \
     nano \
     net-tools \
     netcat \
-    sudo && \
+    nano \
+    net-tools \
+    netcat \
+    python3 \
+    python3-venv \
+    python3-pip \
+    sqlite3 \
+    nodejs \
+    npm \
+    yarn \
+    wget \
+    unzip \
+    zip \
+    docker.io \
+    sudo &&\
+    npm install -g bun &&\
   echo "**** install code-server ****" && \
   if [ -z ${CODE_RELEASE+x} ]; then \
     CODE_RELEASE=$(curl -sX GET https://api.github.com/repos/coder/code-server/releases/latest \

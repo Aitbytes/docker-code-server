@@ -29,3 +29,9 @@ chmod 700 /config/.ssh
 if [ -n "$(ls -A /config/.ssh)" ]; then
     chmod 600 /config/.ssh/*
 fi
+
+#add user to docker group
+usermod -aG docker abc
+#change privileges on docker.sock
+chown root:docker /var/run/docker.sock
+chmod 666 /var/run/docker.sock
